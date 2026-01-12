@@ -3,26 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>helt consulting</title>
+  <title>Helt Consulting</title>
   <style>
-    /* Algemeen */
+    /* Achtergrond en body */
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 50px;
-      background-color: #f9f9f9;
       margin: 0;
+      /* Achtergrondafbeelding */
+      background-image: url('achtergrond.jpg'); /* <-- upload je JPEG hier */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    /* Overlay voor leesbaarheid */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: -1;
     }
 
     /* Header */
     h1 {
-      color: #2c3e50;
       font-size: 3em;
       margin-bottom: 0.3em;
     }
     p.subtitle {
       font-size: 1.2em;
-      color: #555;
       margin-bottom: 2em;
     }
 
@@ -49,20 +62,27 @@
       max-width: 800px;
       margin: 40px auto;
       text-align: left;
-      padding: 0 20px;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 10px;
     }
     section h2 {
-      color: #2c3e50;
       margin-bottom: 0.5em;
     }
     section p {
-      color: #555;
       line-height: 1.6;
+    }
+    section a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    section a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>helt consulting</h1>
+  <h1>Helt Consulting</h1>
   <p class="subtitle">Your partner for (freelance) management services & strategic advice</p>
 
   <!-- Knoppen -->
@@ -76,20 +96,20 @@
   <section id="about">
     <h2>About Me</h2>
     <p>My name is Thomas Helsen.
-      I'm a Seasoned executive with extensive leadership experience in global IT hardware distribution, sales, and sustainability-oriented business operations. 
+      I'm a seasoned executive with extensive leadership experience in global IT hardware distribution, sales, and sustainability-oriented business operations. 
       I have a proven ability to scale international teams, develop market expansion strategies, and integrate circular-economy principles into technology sales, 
       with a strong academic foundation in management and business leadership.</p>
   </section>
 
   <section id="services">
     <h2>Services</h2>
-    <p>I help small business owners to scale-up, either with strategic management services, investing or a combination of both. 
+    <p>I help small business owners to scale-up, either with strategic management services, investing, or a combination of both. 
       Next to that, you can contact me for all kinds of executive management positions as well.</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Mail: <a href="mailto:thomas@helt-consulting.be">t.helsen@helt-consulting.be</a></p>
+    <p>Mail: <a href="mailto:t.helsen@helt-consulting.be">t.helsen@helt-consulting.be</a></p>
     <p>Tel: +32 478 819 111</p>
     <p>VAT: BE0687.701.195</p>
   </section>
