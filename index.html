@@ -9,37 +9,36 @@
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background-image:url('1393189.jpg');
+    background-image:url('achtergrond.jpg');
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     color:white;
 }
 
-/* Dark overlay */
 body::before{
     content:"";
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.55);
+    background:rgba(0,0,0,.5);
     z-index:-1;
 }
 
 /* NAV BAR */
 .navbar{
     width:100%;
-    background:rgba(0,0,0,.75);
+    background:rgba(212,160,25,.85); /* oker geel */
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:12px 40px;
+    padding:14px 40px;
     position:fixed;
     top:0;
     left:0;
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(8px);
 }
 
-/* Logo area */
+/* Brand */
 .brand{
     display:flex;
     align-items:center;
@@ -53,7 +52,7 @@ body::before{
 .brand span{
     font-size:1.8rem;
     font-weight:bold;
-    color:#d4a019;   /* oker-geel */
+    color:black;
     text-transform:lowercase;
 }
 
@@ -67,7 +66,7 @@ body::before{
 .menu button{
     background:none;
     border:none;
-    color:white;
+    color:black;
     font-size:1.1rem;
     margin:0 25px;
     cursor:pointer;
@@ -78,11 +77,10 @@ body::before{
 
 .menu button:hover,
 .menu button.active{
-    border-bottom:2px solid #d4a019;
-    color:#d4a019;
+    border-bottom:2px solid black;
 }
 
-/* MAIN CONTENT */
+/* CONTENT */
 .container{
     max-width:900px;
     margin:150px auto 60px;
@@ -91,13 +89,8 @@ body::before{
     border-radius:16px;
 }
 
-.page{
-    display:none;
-}
-
-.page.active{
-    display:block;
-}
+.page{ display:none; }
+.page.active{ display:block; }
 
 h2{
     color:#d4a019;
@@ -107,7 +100,7 @@ h2{
     text-align:center;
     margin-bottom:40px;
     font-size:1.2rem;
-    color:#ddd;
+    color:#eee;
 }
 
 p{
@@ -126,7 +119,7 @@ a:hover{ text-decoration:underline; }
 
 <div class="navbar">
     <div class="brand">
-        <img src="logo_helt-consulting_final.png">
+        <img src="logo.png">
         <span>helt consulting</span>
     </div>
 
@@ -138,7 +131,6 @@ a:hover{ text-decoration:underline; }
 </div>
 
 <div class="container">
-
     <p class="subtitle">your partner for (freelance) management services & strategic advice</p>
 
     <div id="about" class="page active">
@@ -167,7 +159,6 @@ a:hover{ text-decoration:underline; }
         <p>tel: +32 478 819 111</p>
         <p>vat: BE0687.701.195</p>
     </div>
-
 </div>
 
 <script>
